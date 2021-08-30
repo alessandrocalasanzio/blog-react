@@ -1,0 +1,531 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/*GENERALI*/
+
+body {
+  background-color: rgb(187, 233, 119);
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*NAVBAR*/
+
+#navbar {
+  background-color: black !important;
+  position: fixed;
+  /* Make it stick/fixed */
+  top: 0;
+  /* Stay on top */
+  width: 100%;
+  /* Full width */
+  transition: top 0.5s;
+  /* Transition effect when sliding down (and up) */
+  z-index: 9999;
+}
+
+.nav-link {
+  color: white !important;
+  /*font-family:'Bebas Neue', !important;  */
+  /*font-family: 'Staatliches', !important;*/
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  /*METTE IN MAIUSCOLO IL TESTO*/
+  text-decoration: none;
+  /*ELIMINA LA SOTTOLINEATURA DAL TESTO */
+  letter-spacing: 0.1em;
+  /*SPAZIO TRA LE LETTERE*/
+  display: inline-block;
+  /*DOVREBBE METTERE IL TESTO IN LINEA E NON A CAPO*/
+  padding: 10px 50px;
+  /*Primo elemento è la grandezza della banda nera, il secondo la distanza tra gli elementi*/
+  position: relative;
+}
+
+.nav-link:hover {
+  color: green !important;
+}
+
+
+
+
+.test {
+  scroll-behavior: smooth !important;
+}
+
+@media screen and (max-width: 993px) {
+  .nav-link {
+      font-size: 2vw;
+      
+  }
+}
+
+@media screen and (max-width: 993px) {
+  .nav-item {
+    
+      text-align: center;
+     
+      
+  }
+}
+
+
+/*FINE NAVBAR*/
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*POSIZIONE BOTTONE*/
+
+.position-body {
+  text-align: center;
+  float: row;
+  font-family: 'Press Start 2P';
+  margin-top: 80px;
+}
+
+@media all and (max-width:1063px) {
+  .big-button {
+      width: 40.99999%;
+      display: inline-block;
+      font-size: 6px;
+      margin: 1%;
+      align-items: center;
+  }
+}
+
+@media all and (max-width:997px) {
+  .position-body {
+      margin-top: 120px;
+  }
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+
+/*BOTTONE COLORATO*/
+
+:root {
+  --colorShadeA: rgb(1, 17, 10);
+  --colorShadeB: rgb(10, 102, 105);
+  --colorShadeC: rgb(11, 172, 194);
+  --colorShadeD: rgb(11, 135, 192);
+  --colorShadeE: rgb(12, 240, 133);
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button {
+  position: relative;
+  display: inline-block flex;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none !important;
+  font-size: 0.7rem;
+  color: var(--colorShadeA);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+button.big-button {
+  font-family: 'Press Start 2P';
+  padding: 1em 2em;
+  border: 2px solid var(--colorShadeA);
+  border-radius: 1em;
+  background: var(--colorShadeE);
+  transform-style: preserve-3d;
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+  text-decoration: none !important;
+}
+
+button.big-button::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--colorShadeC);
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+  transform: translate3d(0, 0.75em, -1em);
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+  text-decoration: none !important;
+}
+
+button.big-button:hover {
+  background: var(--colorShadeD);
+  transform: translate(0, 0.375em);
+}
+
+button.big-button:hover::before {
+  transform: translate3d(0, 0.75em, -1em);
+}
+
+button.big-button:active {
+  transform: translate(0em, 0.75em);
+}
+
+button.big-button:active::before {
+  transform: translate3d(0, 0, -1em);
+  box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+}
+
+
+
+/*BOTTONE COLORATO FOOTER*/
+
+:root {
+  --colorShadeA: rgb(1, 17, 10);
+  --colorShadeB: rgb(10, 102, 105);
+  --colorShadeC: rgb(11, 172, 194);
+  --colorShadeD: rgb(11, 135, 192);
+  --colorShadeE: rgb(12, 240, 133);
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button {
+  position: relative;
+  display: inline-block flex;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 0.7rem;
+  color: var(--colorShadeA);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+button.big-button1 {
+  font-family: 'Press Start 2P';
+  padding: 1em 2em;
+  border: 2px solid var(--colorShadeA);
+  border-radius: 1em;
+  background: var(--colorShadeE);
+  transform-style: preserve-3d;
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+
+button.big-button1::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--colorShadeC);
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+  transform: translate3d(0, 0.75em, -1em);
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+
+button.big-button1:hover {
+  background: var(--colorShadeD);
+  transform: translate(0, 0.375em);
+}
+
+button.big-button1:hover::before {
+  transform: translate3d(0, 0.75em, -1em);
+}
+
+button.big-button1:active {
+  transform: translate(0em, 0.75em);
+}
+
+button.big-button1:active::before {
+  transform: translate3d(0, 0, -1em);
+  box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*HR*/
+.hrClass {
+    color: pink;
+    z-index: 881;
+    size: 6;
+    width: 80%;
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+
+
+/*ARITOCOLI/DIV*/
+
+.filterDiv {
+    float: left;
+    text-align: center;
+    
+    
+}
+
+
+/* The "show" class is added to the filtered elements */
+
+.show {
+    display: block;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*SEZIONE PORTFOLIO CON LE 4 SEZIONI CON LE IMMAGINI*/
+
+div.gallery img {
+    width: auto;
+    height: auto;
+    background-color: aquamarine;
+    margin: 0 0 0 0;
+    padding: 0 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.responsive1 {
+    padding: 0 0px;
+    float: left;
+    width: 24.99999%;
+    float: left;
+    margin: 30px 0 !important;
+}
+
+
+
+.clearfix:after {
+    
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media only screen and (max-width: 1061px) {
+    .responsive1 {
+        width: 99%;
+        height: auto;
+        margin: 0 0;
+        margin: 5px 0 !important;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .content-title {
+        font-size: small;
+    }
+}
+
+
+
+
+
+
+
+/* FINE SEZIONE PORTFOLIO CON LE 3 SEZIONI CON LE IMMAGINI*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 1054px) {
+ footer{
+   position: relative !important;
+   margin: top 250px !important;
+ }
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+
+}
+
+footer .copyright {
+
+    font-size: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: 'Press Start 2P';
+  }
+  .list-inline-item {
+    display: inline-block;
+  }
+  .list-inline-item:not(:last-child) {
+    margin-right: 0.6rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS POST*/
+header.masthead {
+    margin-bottom: 50px;
+    background: no-repeat center center;
+    background-color: #6c757d;
+    background-attachment: scroll;
+    position: relative;
+    background-size: cover;
+  }
+  header.masthead .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #212529;
+    opacity: 0.5;
+  }
+  header.masthead .page-heading,
+  header.masthead .post-heading,
+  header.masthead .site-heading {
+    padding: 200px 0 150px;
+    color: white;
+  }
+  @media only screen and (min-width: 768px) {
+    header.masthead .page-heading,
+  header.masthead .post-heading,
+  header.masthead .site-heading {
+      padding: 200px 0;
+    }
+  }
+  header.masthead .page-heading,
+  header.masthead .site-heading {
+    text-align: center;
+  }
+  header.masthead .page-heading h1,
+  header.masthead .site-heading h1 {
+    font-size: 50px;
+    margin-top: 0;
+  }
+  header.masthead .page-heading .subheading,
+  header.masthead .site-heading .subheading {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.1;
+    display: block;
+    margin: 10px 0 0;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  @media only screen and (min-width: 768px) {
+    header.masthead .page-heading h1,
+  header.masthead .site-heading h1 {
+      font-size: 80px;
+    }
+  }
+  header.masthead .post-heading h1 {
+    font-size: 35px;
+  }
+  header.masthead .post-heading .meta,
+  header.masthead .post-heading .subheading {
+    line-height: 1.1;
+    display: block;
+  }
+  header.masthead .post-heading .subheading {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0 30px;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  header.masthead .post-heading .meta {
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  header.masthead .post-heading .meta a {
+    color: #fff;
+  }
+  @media only screen and (min-width: 768px) {
+    header.masthead .post-heading h1 {
+      font-size: 55px;
+    }
+    header.masthead .post-heading .subheading {
+      font-size: 30px;
+    }
+  }
+  
+  .contact{
+    font-family: 'Press Start 2P', cursive;
+  }
+
+  .aboutPres{
+    font-family:'Press Start 2P', cursive;
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+
+  }
+
+  .boxAbout{
+    margin-bottom: 150px;
+  }
