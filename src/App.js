@@ -9,6 +9,9 @@ import Footer from './components/footer.js';
 import About from './components/about.js';
 import Contact from './components/contact.js';
 import Articolo from './components/articolo';
+import Home from './components/home.js';
+
+
 
 
 
@@ -17,11 +20,11 @@ import Articolo from './components/articolo';
 
 
 const posts= [
-  {id:0, immagine: Nero, titolo:'MUSICA', descrizione:'descrizione6', aggiornamento:'aggiornamento512', sezione:'musica', articolo:'/articolo'},
-  {id:7, immagine: Nero, titolo:'TECNO', descrizione:'descrizione7', aggiornamento:'aggiornamento7', sezione:'tecnologia'},
-  {id:4, immagine: Nero, titolo:'VIDEOGIOCHI', descrizione:'descrizione3', aggiornamento:'aggiornamento3', sezione:'videogiochi'},
-  {id:3, immagine: Nero, titolo:'FILM', descrizione:'descrizione4', aggiornamento:'aggiornamento4', sezione:'film'},
-  {id:2, immagine: Nero, titolo:'CONSIGLI', descrizione:'descrizione5', aggiornamento:'aggiornamento5', sezione:'consigli'},
+  {id:0, immagine: Nero, titolo:'MUSICA', descrizione:'Il primo articolo del Blog!', aggiornamento:'Il primo articolo del Blog!', sezione:'musica', articolo:'/articolo'},
+  {id:7, immagine: Nero, titolo:'TECNO', descrizione:'Coming Soon', aggiornamento:'In aggiornamento', sezione:'tecnologia'},
+  {id:4, immagine: Nero, titolo:'VIDEOGIOCHI', descrizione:'Coming Soon', aggiornamento:'In aggiornamento', sezione:'videogiochi'},
+  {id:3, immagine: Nero, titolo:'FILM', descrizione:'Coming Soon', aggiornamento:'In aggiornamento', sezione:'film'},
+  {id:2, immagine: Nero, titolo:'CONSIGLI', descrizione:'Coming Soon', aggiornamento:'In aggiornamento', sezione:'consigli'},
 ];
 
 
@@ -65,7 +68,7 @@ function App(props){
       
         <Router basename={window.location.pathname || ''}>
         <Switch>
-       
+       <Route exact path="/home" component={Home} />
        <Route exact path="/about" component={About}></Route>
        <Route exact path="/contact" component={Contact}></Route>
        <Route exact path="/articolo" component={Articolo}></Route>

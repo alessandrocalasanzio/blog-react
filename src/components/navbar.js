@@ -5,6 +5,7 @@ import { debounce } from '../utilities/helpers';
 import '../App.css';
 import {Link} from 'react-router-dom';
 import '../App.js';
+import home from '../img/home.png';
 
 
 
@@ -34,8 +35,9 @@ const Navbar = () => {
     <div id="navbar" style={{ top: visible ? '0' : '-75px' }} >
         <nav class=" navbar navbar-expand-lg navbar-dark " style={{backgroundColor:'black'}}>
          
-          <a class="navbar-brand"><img src={bape} alt="Alex" title="Alex" width="50" height="50"/></a>
-         
+         <Link to="/home">
+          <a class="navbar-brand"><img src={home} alt="Alex" title="Alex" width="50" height="50"/></a>
+          </Link>
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
